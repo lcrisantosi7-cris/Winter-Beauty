@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Winter Beauty - Inicio</title>
+    <!--Link para css-->
+    <link rel="stylesheet" href="css/style.css">
+    <!--Iconos-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <!--Tipografia-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Encabezado -->
+    <header class="navbar">
+        <div class="logo" onclick="window.location.href='index.html'" style="cursor: pointer;">Winter Beauty</div>
+
+        <nav class="nav-links">
+            <a href="nuevo.html">Nuevo</a>
+            <a href="mas-vendido.html">Lo más vendido</a>
+            <a href="fragancias.html">Fragancias</a>
+            <a href="#">Colecciones</a>
+            <a href="#">Nosotros</a>
+        </nav>
+
+        <div class="nav-icons">
+            <div class="search-box">
+                <input type="text" placeholder="">
+                <i class="bi bi-search"></i>
+            </div>
+            <a href="#"><i class="bi bi-person"></i></a>
+            <a href="carrito.html" class="carrito-icon-container">
+                <i class="bi bi-cart"></i>
+                <span class="carrito-badge" id="carrito-count">0</span>
+            </a>
+        </div>
+    </header>
+    <!--Secction banner estatico-->
+    <section class="banner">
+      <div class="banner-content">
+        <h1>Te mereces un brillo duradero</h1>
+        <a href="producto1.html"><button class="btn-banner" >Comprar Ahora</button></a>
+      </div>
+    </section>
+
+    <!-- PRODUCTOS -->
+    <section class="productos">
+        <h2>Productos <span>Nuevos</span></h2>
+            <div class="grid">
+            <div class="card">
+                <div class="tag">Nuevo</div>
+                <img src="recursos/productos_nuevos/producto1.jpg" alt="Lápiz difuminador" />
+                <h3>Lápiz para difuminar poros</h3>
+                <p class="precio">S/. 89.00</p>
+                <button onclick="agregarAlCarrito(this)" 
+                        data-id="producto1" 
+                        data-nombre="Lápiz para difuminar poros" 
+                        data-precio="89.00" 
+                        data-imagen="recursos/productos_nuevos/producto1.jpg">
+                    Añadir al carrito
+                </button>
+            </div>
+
+            <div class="card">
+                <div class="tag">Nuevo</div>
+                <img src="recursos/productos_nuevos/producto2.jpg" alt="Prebase hidratante" />
+                <h3>Prebase hidratante Good</h3>
+                <p class="precio">S/. 89.00</p>
+                <button onclick="agregarAlCarrito(this)" 
+                        data-id="producto2" 
+                        data-nombre="Prebase hidratante Good" 
+                        data-precio="89.00" 
+                        data-imagen="recursos/productos_nuevos/producto2.jpg">
+                    Añadir al carrito
+                </button>
+            </div>
+
+            <div class="card">
+                <div class="tag">Nuevo</div>
+                <img src="recursos/productos_nuevos/producto3.jpg" alt="Spray fijador" />
+                <h3>Spray fijador Lock'd</h3>
+                <p class="precio">S/. 89.00</p>
+                <button onclick="agregarAlCarrito(this)" 
+                        data-id="producto3" 
+                        data-nombre="Spray fijador Lock'd" 
+                        data-precio="89.00" 
+                        data-imagen="recursos/productos_nuevos/producto3.jpg">
+                    Añadir al carrito
+                </button>
+            </div>
+
+            <div class="card">
+                <div class="tag">Nuevo</div>
+                <img src="recursos/productos_nuevos/producto4.jpg" alt="Camera On prebase" />
+                <h3>Camera On Suavizante </h3> 
+                <p class="precio">S/. 89.00</p>
+                <button onclick="agregarAlCarrito(this)" 
+                        data-id="producto4" 
+                        data-nombre="Camera On Suavizante" 
+                        data-precio="89.00" 
+                        data-imagen="recursos/productos_nuevos/producto4.jpg">
+                    Añadir al carrito
+                </button>
+            </div>
+        </div>
+    </section>
+    <section class="promo">
+        <div class="promo-text">
+            <p><span>+</span> BRILLO</p>
+            <p><span>+</span> SUAVIDAD</p>
+            <p><span>+</span> COLOR</p>
+        </div>
+
+        <div class="promo-carousel">
+            <div class="slides">
+            <img src="recursos/carrusel/img1.jpg" alt="Producto 1">
+            <img src="recursos/carrusel/img2.jpg" alt="Producto 2">
+            <img src="recursos/carrusel/img3.jpg" alt="Producto 3">
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN TODOS NUESTROS PRODUCTOS -->
+    <section class="todos-productos">
+        <h2>Todos Nuestros <span>Productos</span></h2>
+        
+        <div class="carrusel-container">
+            <!-- Botón anterior -->
+            <button class="carrusel-btn prev-btn">
+                <i class="bi bi-chevron-left"></i>
+            </button>
+
+            <!-- Carrusel de productos -->
+            <div class="carrusel-productos">
+                <div class="carrusel-track">
+                    
+                    <!-- Producto 1 -->
+                    <div class="producto-carrusel">
+                        <div class="producto-imagen">
+                            <img src="recursos/todos_productos/producto1.jpg" alt="Be glow stick shading    ">
+                        </div>
+                        <h3>Be glow stick shading</h3>
+                        <p class="precio-producto">S/. 89.00</p>
+                        <div class="stars-producto">
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                        </div>
+                        <button class="btn-carrito">Añadir al carrito</button>
+                    </div>
+
+                    <!-- Producto 2 -->
+                    <div class="producto-carrusel">
+                        <div class="producto-imagen">
+                            <img src="recursos/todos_productos/producto2.jpg" alt="Be glow stick radiance">
+                        </div>
+                        <h3>Be glow stick radiance</h3>
+                        <p class="precio-producto">S/. 89.00</p>
+                        <div class="stars-producto">
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                        </div>
+                        <button class="btn-carrito">Añadir al carrito</button>
+                    </div>
+
+                    <!-- Producto 3 -->
+                    <div class="producto-carrusel">
+                        <div class="producto-imagen">
+                            <img src="recursos/todos_productos/producto3.jpg" alt="Be velvet cover cushion">
+                        </div>
+                        <h3>Be velvet cover cushion</h3>
+                        <p class="precio-producto">S/. 89.00</p>
+                        <div class="stars-producto">
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                        </div>
+                        <button class="btn-carrito">Añadir al carrito</button>
+                    </div>
+
+                    <!-- Producto 4 -->
+                    <div class="producto-carrusel">
+                        <div class="producto-imagen">
+                            <img src="recursos/todos_productos/producto4.jpg" alt="Water splash sun serum">
+                        </div>
+                        <h3>Water splash sun serum</h3>
+                        <p class="precio-producto">S/. 89.00</p>
+                        <div class="stars-producto">
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                        </div>
+                        <button class="btn-carrito">Añadir al carrito</button>
+                    </div>
+
+                    <!-- Producto 5 -->
+                    <div class="producto-carrusel">
+                        <div class="producto-imagen">
+                            <img src="recursos/todos_productos/producto1.jpg" alt="Be glow stick shading">
+                        </div>
+                        <h3>Be glow stick shading</h3>
+                        <p class="precio-producto">S/. 89.00</p>
+                        <div class="stars-producto">
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                        </div>
+                        <button class="btn-carrito">Añadir al carrito</button>
+                    </div>
+
+                    <!-- Producto 6 -->
+                    <div class="producto-carrusel">
+                        <div class="producto-imagen">
+                            <img src="recursos/todos_productos/producto2.jpg" alt="Be glow stick radiance">
+                        </div>
+                        <h3>Be glow stick radiance</h3>
+                        <p class="precio-producto">S/. 89.00</p>
+                        <div class="stars-producto">
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                        </div>
+                        <button class="btn-carrito">Añadir al carrito</button>
+                    </div>
+
+                    <!-- Producto 7 -->
+                    <div class="producto-carrusel">
+                        <div class="producto-imagen">
+                            <img src="recursos/fragancias/producto1.jpg" alt="Romántico Pour Femme">
+                        </div>
+                        <h3>Romántico Pour Femme</h3>
+                        <p class="precio-producto">S/. 89.00</p>
+                        <div class="stars-producto">
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                        </div>
+                        <button class="btn-carrito">Añadir al carrito</button>
+                    </div>
+
+                    <!-- Producto 8 -->
+                    <div class="producto-carrusel">
+                        <div class="producto-imagen">
+                            <img src="recursos/fragancias/producto2.jpg" alt="Bruma aromática 091">
+                        </div>
+                        <h3>Bruma aromática 091</h3>
+                        <p class="precio-producto">S/. 89.00</p>
+                        <div class="stars-producto">
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                        </div>
+                        <button class="btn-carrito">Añadir al carrito</button>
+                    </div>
+
+                    <!-- Producto 9 -->
+                    <div class="producto-carrusel">
+                        <div class="producto-imagen">
+                            <img src="recursos/fragancias/producto3.jpg" alt="Black Addiction">
+                        </div>
+                        <h3>Black Addiction</h3>
+                        <p class="precio-producto">S/. 89.00</p>
+                        <div class="stars-producto">
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                        </div>
+                        <button class="btn-carrito">Añadir al carrito</button>
+                    </div>
+
+                    <!-- Producto 10 -->
+                    <div class="producto-carrusel">
+                        <div class="producto-imagen">
+                            <img src="recursos/fragancias/producto4.jpg" alt="Natural Escape">
+                        </div>
+                        <h3>Natural Escape</h3>
+                        <p class="precio-producto">S/. 89.00</p>
+                        <div class="stars-producto">
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                        </div>
+                        <button class="btn-carrito">Añadir al carrito</button>
+                    </div>
+
+                    <!-- Producto 11 -->
+                    <div class="producto-carrusel">
+                        <div class="producto-imagen">
+                            <img src="recursos/fragancias/producto5.jpg" alt="Fiesta Flor">
+                        </div>
+                        <h3>Fiesta Flor</h3>
+                        <p class="precio-producto">S/. 89.00</p>
+                        <div class="stars-producto">
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                        </div>
+                        <button class="btn-carrito">Añadir al carrito</button>
+                    </div>
+
+                    <!-- Producto 12 -->
+                    <div class="producto-carrusel">
+                        <div class="producto-imagen">
+                            <img src="recursos/fragancias/producto6.jpg" alt="Toque Rosa">
+                        </div>
+                        <h3>Toque Rosa</h3>
+                        <p class="precio-producto">S/. 89.00</p>
+                        <div class="stars-producto">
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                        </div>
+                        <button class="btn-carrito">Añadir al carrito</button>
+                    </div>
+
+                    <!-- Producto 13 -->
+                    <div class="producto-carrusel">
+                        <div class="producto-imagen">
+                            <img src="recursos/fragancias/producto7.jpg" alt="Nube Suave">
+                        </div>
+                        <h3>Nube Suave</h3>
+                        <p class="precio-producto">S/. 89.00</p>
+                        <div class="stars-producto">
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                        </div>
+                        <button class="btn-carrito">Añadir al carrito</button>
+                    </div>
+
+                    <!-- Producto 14 -->
+                    <div class="producto-carrusel">
+                        <div class="producto-imagen">
+                            <img src="recursos/fragancias/producto8.jpg" alt="Aqua Juicy Pure Pink 01">
+                        </div>
+                        <h3>Aqua Juicy Pure Pink 01</h3>
+                        <p class="precio-producto">S/. 89.00</p>
+                        <div class="stars-producto">
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                        </div>
+                        <button class="btn-carrito">Añadir al carrito</button>
+                    </div>
+
+                    <!-- Producto 15 -->
+                    <div class="producto-carrusel">
+                        <div class="producto-imagen">
+                            <img src="recursos/mas_vendido/producto1.jpg" alt="Nowear lipstick balming glow">
+                        </div>
+                        <h3>Nowear lipstick balming glow</h3>
+                        <p class="precio-producto">S/. 89.00</p>
+                        <div class="stars-producto">
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                        </div>
+                        <button class="btn-carrito">Añadir al carrito</button>
+                    </div>
+                    
+                    <!-- Producto 16 -->
+                    <div class="producto-carrusel">
+                        <div class="producto-imagen">
+                            <img src="recursos/mas_vendido/producto2.jpg" alt="Gel para cejas set me up">
+                        </div>
+                        <h3>Gel para cejas set me up</h3>
+                        <p class="precio-producto">S/. 89.00</p>
+                        <div class="stars-producto">
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                        </div>
+                        <button class="btn-carrito">Añadir al carrito</button>
+                    </div>
+                    
+                    <!-- Producto 17 -->
+                    <div class="producto-carrusel">
+                        <div class="producto-imagen">
+                            <img src="recursos/mas_vendido/producto3.jpg" alt="Prebase hidratante good prep">
+                        </div>
+                        <h3>Prebase hidratante good prep</h3>
+                        <p class="precio-producto">S/. 89.00</p>
+                        <div class="stars-producto">
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                        </div>
+                        <button class="btn-carrito">Añadir al carrito</button>
+                    </div>
+                    
+                    <!-- Producto 18 -->
+                    <div class="producto-carrusel">
+                        <div class="producto-imagen">
+                            <img src="recursos/mas_vendido/producto5.jpg" alt="Paleta de bayas">
+                        </div>
+                        <h3>Paleta de bayas</h3>
+                        <p class="precio-producto">S/. 89.00</p>
+                        <div class="stars-producto">
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                        </div>
+                        <button class="btn-carrito">Añadir al carrito</button>
+                    </div>
+                    
+                    <!-- Producto 19 -->
+                    <div class="producto-carrusel">
+                        <div class="producto-imagen">
+                            <img src="recursos/mas_vendido/producto6.jpg" alt="Rubor líquido color bloom">
+                        </div>
+                        <h3>Rubor líquido color bloom</h3>
+                        <p class="precio-producto">S/. 89.00</p>
+                        <div class="stars-producto">
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                        </div>
+                        <button class="btn-carrito">Añadir al carrito</button>
+                    </div>
+                    
+                    <!-- Producto 20 -->
+                    <div class="producto-carrusel">
+                        <div class="producto-imagen">
+                            <img src="recursos/mas_vendido/producto7.jpg" alt="Spray fijador matte fresco">
+                        </div>
+                        <h3>Spray fijador matte fresco</h3>
+                        <p class="precio-producto">S/. 89.00</p>
+                        <div class="stars-producto">
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                        </div>
+                        <button class="btn-carrito">Añadir al carrito</button>
+                    </div>
+                    
+                    <!-- Producto 21 -->
+                    <div class="producto-carrusel">
+                        <div class="producto-imagen">
+                            <img src="recursos/mas_vendido/producto8.jpg" alt="Delineador de ojos">
+                        </div>
+                        <h3>Delineador de ojos</h3>
+                        <p class="precio-producto">S/. 89.00</p>
+                        <div class="stars-producto">
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                        </div>
+                        <button class="btn-carrito">Añadir al carrito</button>
+                    </div>
+                    
+                    <!-- Producto 22 -->
+                    <div class="producto-carrusel">
+                        <div class="producto-imagen">
+                            <img src="recursos/productos_nuevos/producto1.jpg" alt="Lápiz para difuminar poros">
+                        </div>
+                        <h3>Lápiz para difuminar poros</h3>
+                        <p class="precio-producto">S/. 89.00</p>
+                        <div class="stars-producto">
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                        </div>
+                        <button class="btn-carrito">Añadir al carrito</button>
+                    </div>         
+                    
+                    <!-- Producto 23 -->
+                    <div class="producto-carrusel">
+                        <div class="producto-imagen">
+                            <img src="recursos/productos_nuevos/producto2.jpg" alt="Prebase hidratante Good Grip">
+                        </div>
+                        <h3>Prebase hidratante Good Grip</h3>
+                        <p class="precio-producto">S/. 89.00</p>
+                        <div class="stars-producto">
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                        </div>
+                        <button class="btn-carrito">Añadir al carrito</button>
+                    </div>
+                    
+                    <!-- Producto 24 -->
+                    <div class="producto-carrusel">
+                        <div class="producto-imagen">
+                            <img src="recursos/productos_nuevos/producto3.jpg" alt="Spray fijador Lock'd">
+                        </div>
+                        <h3>Spray fijador Lock'd</h3>
+                        <p class="precio-producto">S/. 89.00</p>
+                        <div class="stars-producto">
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                        </div>
+                        <button class="btn-carrito">Añadir al carrito</button>
+                    </div>                    
+                </div>
+
+
+
+            </div>
+
+            <!-- Botón siguiente -->
+            <button class="carrusel-btn next-btn">
+                <i class="bi bi-chevron-right"></i>
+            </button>
+        </div>
+
+        <!-- Indicadores -->
+        <div class="carrusel-dots"></div>
+    </section>
+
+
+
+    <!-- SECCIÓN TESTIMONIOS -->
+    <section class="testimonios">
+        <h2>Lo Que Todas <span>Aman</span></h2>
+        
+        <div class="testimonios-grid">
+
+            <div class="testimonio-card imagen-sola">
+                <img src="recursos/testimonios/img1.jpg" alt="Cliente feliz">
+            </div>
+
+            <!-- Tarjeta 2 - Texto blanco -->
+            <div class="testimonio-card texto-blanco">
+                <p>¡Súper fácil! Este pequeño y maravilloso producto ha transformado por completo mi técnica de contorno. 
+                Nunca había visto un producto fundirse con la piel de esta manera. ¡Es prácticamente infalible!
+                </p>
+                <div class="stars" data-rating="0">
+                    <i class="bi bi-star"></i>
+                    <i class="bi bi-star"></i>
+                    <i class="bi bi-star"></i>
+                    <i class="bi bi-star"></i>
+                    <i class="bi bi-star"></i>
+                </div>
+                <button class="btn-comprar">Comprar Ahora</button>
+            </div>
+
+            <!-- Tarjeta 3 - Rosa -->
+            <div class="testimonio-card pink">
+                <p>Me encanta este producto. Tengo más de 50 años y puedo decir con toda sinceridad que me fascina. 
+                    No me marca los poros ni nada parecido. Lo recomiendo muchísimo para mujeres de cierta edad.
+                </p>
+                <div class="stars" data-rating="0">
+                    <i class="bi bi-star"></i>
+                    <i class="bi bi-star"></i>
+                    <i class="bi bi-star"></i>
+                    <i class="bi bi-star"></i>
+                    <i class="bi bi-star"></i>
+                </div>
+                <button class="btn-comprar">Comprar Ahora</button>
+            </div>
+
+            <!-- Fila 2: Tarjeta azul grande + Imagen -->
+            
+            <!-- Tarjeta 4 - Azul (ocupa 2 espacios) -->
+            <div class="testimonio-card blue">
+                <p>¡Me encantaron los productos de Winter Beauty! La prebase fue súper efectiva y dejó mis ojos 
+                    con una mirada más luminosa. Uso productos de Winter Beauty todos los días. ¡Ya quiero seguir comprando con ustedes!
+                </p>
+                <div class="stars" data-rating="0">
+                    <i class="bi bi-star"></i>
+                    <i class="bi bi-star"></i>
+                    <i class="bi bi-star"></i>
+                    <i class="bi bi-star"></i>
+                    <i class="bi bi-star"></i>
+                </div>
+                <button class="btn-comprar2">Comprar Ahora</button>
+            </div>
+
+            <!-- Tarjeta 5 - Solo Imagen -->
+            <div class="testimonio-card imagen-sola">
+                <img src="recursos/testimonios/img2.jpg" alt="Cliente sonriente">
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECCIÓN PASIÓN CON PROPÓSITO -->
+    <section class="proposito">
+        <h2>Pasión Con <span>Propósito</span></h2>
+        
+        <div class="proposito-grid">
+            <div class="proposito-item">
+                <div class="icono-proposito">
+                    <img src="recursos/iconos/icon1.png" alt="Libre de crueldad animal">
+                </div>
+                <h3>Libre de crueldad animal</h3>
+                <p>Aprobado como libre de crueldad animal según el programa Leaping Bunny</p>
+            </div>
+
+            <div class="proposito-item">
+                <div class="icono-proposito">
+                    <img src="recursos/iconos/icon2.png" alt="Vegano">
+                </div>
+                <h3>Vegano</h3>
+                <p>Más del 90% de nuestros productos son veganos</p>
+            </div>
+
+            <div class="proposito-item">
+                <div class="icono-proposito">
+                    <img src="recursos/iconos/icon3.png" alt="WinterGlow">
+                </div>
+                <h3>WinterGlow</h3>
+                <p>Promovemos una belleza limpia con productos seguros y transparentes, libres de más de 1700 ingredientes cuestionables y respaldados por más de 50 pruebas de verificación.</p>
+            </div>
+
+            <div class="proposito-item">
+                <div class="icono-proposito">
+                    <img src="recursos/iconos/icon4.png" alt="Sustainable Packaging">
+                </div>
+                <h3>Sustainable Packaging</h3>
+                <p>Nuestras cajas cuentan con la certificación FSC y están fabricadas con materiales de origen responsable.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-top">
+            <!-- Contacto y Redes -->
+            <div class="footer-contacto">
+                <h3>Conéctate<br>con nosotros</h3>
+                <div class="redes-sociales">
+                    <a href="#"><i class="bi bi-whatsapp"></i></a>
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                    <a href="#"><i class="bi bi-tiktok"></i></a>
+                </div>
+                <p class="contacto-info">
+                    <a href="mailto:winterbeauty@gmail.com">winterbeauty@gmail.com</a> | 
+                    Teléfono: 943 759 634
+                </p>
+            </div>
+
+            <!-- Tiendas -->
+            <div class="footer-tiendas">
+                <!-- Miraflores -->
+                <div class="tienda">
+                    <h4>Miraflores</h4>
+                    <p>Avenida Larco 101, tda 206<br>(2do piso)</p>
+                    <p class="horario"><strong>Horario de atención:</strong><br>
+                    Lunes a sábado de 10am a 9:00pm<br>
+                    y domingos 10am a 7:00pm</p>
+                </div>
+
+                <!-- San Miguel -->
+                <div class="tienda">
+                    <h4>San Miguel</h4>
+                    <p>CC. Plaza San Miguel, tda 213<br>(2do piso)</p>
+                    <p class="horario"><strong>Horario de atención:</strong><br>
+                    Lunes a domingo de 10am a 10:00pm</p>
+                </div>
+
+                <!-- Independencia -->
+                <div class="tienda">
+                    <h4>Independencia</h4>
+                    <p>CC. Plaza Norte, tda 1108<br>(Frente a las Cajas de<br>pago de Metro)</p>
+                    <p class="horario"><strong>Horario de atención:</strong><br>
+                    Lunes a sábado de 10am a 9:00pm<br>
+                    y domingos 10am a 7:00pm</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <!-- Enlaces -->
+            <div class="footer-links">
+                <div class="links-column">
+                    <h4>Productos</h4>
+                    <a href="#">Nuevo</a>
+                    <a href="#">Lo más vendido</a>
+                    <a href="#">Fragancias</a>
+                    <a href="#">Colecciones</a>
+                    <a href="#">Nosotros</a>
+                </div>
+
+                <div class="links-column">
+                    <h4>Nuestra empresa</h4>
+                    <a href="#">Acerca de nosotros</a>
+                    <a href="#">Tienda física</a>
+                    <a href="#">Términos y condiciones</a>
+                    <a href="#">Preguntas</a>
+                </div>
+
+                <div class="links-column ayuda">
+                    <h4>Te ayudamos</h4>
+                    <img class="reclamos" src="recursos/reclamos.png" alt="Libro de reclamaciones">
+                </div>
+            </div>
+
+            <div class="footer-copyright">
+                <p>© 2025 Winter Beauty. Todos los derechos reservados</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/carrito.js"></script>
+    <script>
+        function agregarAlCarrito(boton) {
+            const producto = {
+                id: boton.getAttribute('data-id'),
+                nombre: boton.getAttribute('data-nombre'),
+                precio: parseFloat(boton.getAttribute('data-precio')),
+                imagen: boton.getAttribute('data-imagen'),
+            };
+            
+            carrito.agregarProducto(producto);
+            
+            boton.style.transform = 'scale(0.95)';
+            boton.textContent = '¡Agregado!';
+            setTimeout(() => {
+                boton.style.transform = 'scale(1)';
+                boton.textContent = 'Añadir al carrito';
+            }, 1000);
+        }
+    </script>
+    <script src="js/main.js"></script>
+    
+</body>
+</html>
